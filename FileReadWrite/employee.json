@@ -1,0 +1,45 @@
+{
+    "_id": "5dfb451d6983aef65db2dc55",
+    "index": 0,
+    "guid": "7161b68e-dd57-42ea-b7d6-ae9464c74a54",
+    "isActive": false,
+    "balance": "$2,586.68",
+    "picture": "http://placehold.it/32x32",
+    "age": 37,
+    "eyeColor": "blue",
+    "name": "Estes Robinson",
+    "gender": "male",
+    "company": "VICON",
+    "email": "estesrobinson@vicon.com",
+    "phone": "+1 (913) 492-3149",
+    "address": "724 Ovington Court, Cazadero, Nebraska, 9701",
+    "about": "Exercitation reprehenderit in magna officia irure mollit dolore ipsum aute et anim excepteur magna mollit. Sint deserunt irure aliquip non sunt officia Lorem minim sint officia. Consectetur ipsum elit eiusmod ut nisi laboris aute Lorem ullamco adipisicing quis. Cillum elit eiusmod incididunt ullamco nulla aute officia in. Culpa consequat ea elit ex fugiat laboris. Commodo pariatur magna ex enim commodo incididunt esse duis ea. Ullamco esse ut commodo eiusmod consectetur dolore non est in reprehenderit nostrud commodo dolor ex.\r\n",
+    "registered": "2014-08-28T02:01:49 -03:00",
+    "latitude": -19.957801,
+    "longitude": -69.982989,
+    "tags": [
+      "laborum",
+      "officia",
+      "culpa",
+      "amet",
+      "dolor",
+      "ullamco",
+      "amet"
+    ],
+    "friends": [
+      {
+        "id": 0,
+        "name": "Raymond Cooley"
+      },
+      {
+        "id": 1,
+        "name": "Talley Hopper"
+      },
+      {
+        "id": 2,
+        "name": "Valdez Barnes"
+      }
+    ],
+    "greeting": "Hello, Estes Robinson! You have 2 unread messages.",
+    "favoriteFruit": "banana"
+  }
