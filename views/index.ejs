@@ -12,25 +12,22 @@
 </head>
 
 <body>
-    <h1><%=title %></h1>
     <section class="container">
+            <h1><%=title %></h1>
         <div class="row">
             <% userList.forEach(function(user){ %>
-                <div class="col-md-3">
-                    <div class="card" style="width: 18rem;">
+                <div class="col-md-4">
+                    <div class="card">
                         <div class="card-body">
                             <h5 class="card-title"><%= user.name %></h5>
                             <h6 class="card-subtitle mb-2 text-muted"><%= user.email %></h6>
                             <p class="card-text"><%= user.address %></p>
-                            <a href="#" class="card-link">Go to <%= user.name %> profile </a>
+                            <a href="/userList/<%= user.guid %>" class="card-link">Go to <%= user.name %> profile </a>
                         </div>
                     </div>
                 </div>
             <% }); %>
         </div>
     </section>
-
-
 </body>
-
 </html>

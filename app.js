@@ -3,8 +3,10 @@ const app = express();
 const path = require("path");
 const http = require("http");
 const indexRouter = require("./routes/index");
+const userDetailRouter = require('./routes/userDetail');
 
 app.use("/", indexRouter);
+app.use("/", userDetailRouter);
 
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
