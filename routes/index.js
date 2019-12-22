@@ -11,7 +11,7 @@ router.get("/", async (req, res, next) => {
       userList: data,
       title: "Kullanıcı Bilgileri"
     });
-    
+
   } catch (error) {
     res.send("birşeyler ters gitti.");
   }
