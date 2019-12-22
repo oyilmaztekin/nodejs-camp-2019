@@ -1,19 +1,15 @@
 {
   "name": "nodejs-camp-2019",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/oyilmaztekin/nodejs-camp-2019.git"
-  },
-  "author": "ozer.yilmaztekin",
+  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/oyilmaztekin/nodejs-camp-2019/issues"
-  },
-  "homepage": "https://github.com/oyilmaztekin/nodejs-camp-2019#readme"
+  "dependencies": {
+    "ejs": "^3.0.1",
+    "express": "^4.17.1"
+  }
 }
