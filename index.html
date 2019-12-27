@@ -22,7 +22,7 @@
 
 <body>
     <ul id="messages"></ul>
-    <form class="send-message">
+    <form class="send-message" action="#" onsubmit="sendMessage()">
         <div class="input-group input-group-lg">
             <input type="text" class="form-control input-lg" placeholder="Mesaj" id="msg-input">
             <div class="input-group-append">
@@ -31,17 +31,19 @@
         </div>
     </form>
     <script src="/socket.io/socket.io.js"></script>
-    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
 
     <script>
         (function (win, doc) {
             var socket = win.io();
-            $('form').submit(function (e) {
+            document.querySelector('.send-message').onsubmit = sendMessage;
+
+            function sendMessage(e) {
                 e.preventDefault(); // prevents page reloading
-                socket.emit('chatting', $('#msg-input').val());
-                $('#msg-input').val('');
+                socket.emit('chatting', document.querySelector('#msg-input').value);
+                document.querySelector('#msg-input').value = "";
                 return false;
-            });
+            }
+
         })(window, document)
     </script>
 </body>
