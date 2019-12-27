@@ -4,19 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <title>Socket IO Chat</title>
     <style>
-       
+        .send-message {
+            margin: 0;
+            padding: 0;
+            position: fixed;
+            bottom: 10px;
+            width: 80%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
     </style>
 </head>
 
 <body>
+    <ul id="messages"></ul>
+    <form class="send-message">
+        <div class="input-group input-group-lg">
+            <input type="text" class="form-control input-lg" placeholder="Mesaj" id="msg-input">
+            <div class="input-group-append">
+                <button class="btn btn-primary" type="button">Button</button>
+            </div>
+        </div>
+    </form>
     <script src="/socket.io/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+
     <script>
-        (function(win, doc){
+        (function (win, doc) {
             var socket = win.io();
+            $('form').submit(function (e) {
+                e.preventDefault(); // prevents page reloading
+                socket.emit('chatting', $('#msg-input').val());
+                $('#msg-input').val('');
+                return false;
+            });
         })(window, document)
-    </script> 
+    </script>
 </body>
 
 </html>
