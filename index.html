@@ -21,7 +21,7 @@
 </head>
 
 <body>
-    <ul id="messages"></ul>
+    <ul id="messages" class="list-group"></ul>
     <form class="send-message" action="#" onsubmit="sendMessage()">
         <div class="input-group input-group-lg">
             <input type="text" class="form-control input-lg" placeholder="Mesaj" id="msg-input">
@@ -43,6 +43,14 @@
                 document.querySelector('#msg-input').value = "";
                 return false;
             }
+
+            socket.on("chatting", function(msg){
+                const li = document.createElement("li");
+                li.className = "list-group-item";
+                li.innerText = msg;
+                document.querySelector('#messages').appendChild(li);
+
+            })
 
         })(window, document)
     </script>

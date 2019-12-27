@@ -11,7 +11,9 @@ io.on("connection", (socket) => {
     console.log('------------------------------------------------------');
     console.log(`${socket.id} - Kullanıcı bağlandı`);
     socket.on('disconnect', () => console.log(`${socket.id} - Kullanıcı çıkış yaptı.`));
-    socket.on('chatting', (msg) => console.log(`message: ${msg}`));
+    socket.on('chatting', (msg) =>  {
+        io.emit("chatting", msg);
+    });
 })
 
 http.listen(3000, function(){
