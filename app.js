@@ -9,7 +9,8 @@ app.get('/', ({res}) => {
 
 io.on("connection", (socket) => {
     console.log('------------------------------------------------------');
-    console.log(`${socket.id} - Kullanıcı bağlandı`);
+    console.log(`${socket.id} - Kullanıcı bağlandı.`);
+    io.sockets.emit('broadcast',{ id: socket.id, description: 'kullanıcı bağlandı.!'}mongo);
     socket.on('disconnect', () => console.log(`${socket.id} - Kullanıcı çıkış yaptı.`));
     socket.on('chatting', (msg) =>  {
         io.emit("chatting", msg);

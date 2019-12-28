@@ -21,8 +21,9 @@
 </head>
 
 <body>
+    <span class="auth-state"></span>
     <ul id="messages" class="list-group"></ul>
-    <form class="send-message" action="#" onsubmit="sendMessage()">
+    <form class="send-message" action="#">
         <div class="input-group input-group-lg">
             <input type="text" class="form-control input-lg" placeholder="Mesaj" id="msg-input">
             <div class="input-group-append">
@@ -35,7 +36,7 @@
     <script>
         (function (win, doc) {
             var socket = win.io();
-            document.querySelector('.send-message').onsubmit = sendMessage;
+            document.querySelector('.send-message').addEventListener("submit", sendMessage);
 
             function sendMessage(e) {
                 e.preventDefault(); // prevents page reloading
@@ -44,13 +45,16 @@
                 return false;
             }
 
-            socket.on("chatting", function(msg){
+            socket.on("chatting", function (msg) {
                 const li = document.createElement("li");
                 li.className = "list-group-item";
                 li.innerText = msg;
                 document.querySelector('#messages').appendChild(li);
-
             })
+            socket.on('broadcast', function (data) {
+                console.log(data);
+                document.querySelector('.auth-state').innerText = data.id + " " + data.description;
+            });
 
         })(window, document)
     </script>
