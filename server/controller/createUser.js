@@ -4,6 +4,7 @@ function createUser(user) {
   return new EmployeeSchema({
     name: user.name,
     email: user.email,
+    age: user.age,
     mobile: user.mobile
   });
 }

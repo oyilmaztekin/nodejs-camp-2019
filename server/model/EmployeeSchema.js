@@ -14,6 +14,10 @@ const EmployeeSchema = new mongoose.Schema({
         unique:true,
         index:true,
     },
+    age: {
+        type: Number,
+        required: [true, "yaş zorunlu"]
+    },
     mobile:{
         type:String,
         required:[true," telefon zorunlu"],
