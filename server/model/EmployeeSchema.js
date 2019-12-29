@@ -1,30 +1,25 @@
-const mongoose = require('mongoose'); // Erase if already required
+const mongoose = require("mongoose");
 
-// Declare the Schema of the Mongo model
 const EmployeeSchema = new mongoose.Schema({
-    name:{
-        type:String,
-        required:[true, "isim zorunlu"],
-        unique:true,
-        index:true,
-    },
-    email:{
-        type:String,
-        required:[true, "email zorunlu"],
-        unique:true,
-        index:true,
-    },
-    age: {
-        type: Number,
-        required: [true, "yaş zorunlu"]
-    },
-    mobile:{
-        type:String,
-        required:[true," telefon zorunlu"],
-        unique:true,
-        index:true,
-    }
+  name: {
+    type: String,
+    required: true,
+    index: true
+  },
+  email: {
+      type: String,
+      required: [true, "email girilmesi zorunludur."],
+      unique: true,
+      index: true
+  },
+  age: {
+      type: Number,
+      required: [true, "yaş girmediniz"]
+  },
+  mobile: {
+      type: String,
+      unique: true
+  }
 });
 
-//Export the model
-module.exports = mongoose.model('Employee', EmployeeSchema);
+module.exports = mongoose.model("Employee", EmployeeSchema);

@@ -1,0 +1,24 @@
+{
+  "name": "bootcamp-day-5-mern",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "debug": "usr/bin/node --inspect-brk"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oyilmaztekin/node-bootcamp-day-5-mern.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oyilmaztekin/node-bootcamp-day-5-mern/issues"
+  },
+  "homepage": "https://github.com/oyilmaztekin/node-bootcamp-day-5-mern#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.8.3"
+  }
+}
