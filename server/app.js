@@ -22,5 +22,5 @@ mongoose.connect('mongodb://localhost:27017/employees', {
         console.log('Error in DB connection: ' + err)
     }
 });
-
-http.listen(3000, () => console.log('server ayakta'));
+const port = 3000;
+http.listen(3000, () => console.log(`server ${port} üzerinde ayakta`));
