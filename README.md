@@ -1,5 +1,10 @@
 # Node.js Camp 2019
 
+### Araçlar
+- [MongoDB Community Edition](https://docs.mongodb.com/manual/administration/install-community/) 
+- [Mongoose](https://mongoosejs.com/)
+- [Mockoon](https://mockoon.com/)
+- [Robo T3 (Robomongo)](https://robomongo.org/download)
 
 ## 2. Gün
 - Asenkron programlama (event loop basic)
