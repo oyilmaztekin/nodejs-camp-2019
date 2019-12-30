@@ -5,6 +5,7 @@
 - [Mongoose](https://mongoosejs.com/)
 - [Mockoon](https://mockoon.com/)
 - [Robo T3 (Robomongo)](https://robomongo.org/download)
+- [Postman](https://www.getpostman.com/downloads/)
 
 ## 2. Gün
 - Asenkron programlama (event loop basic)
